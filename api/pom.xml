@@ -18,6 +18,8 @@
 		<mybatis-generator-core.version>1.3.2</mybatis-generator-core.version>
 		<mybatis-spring.version>1.2.2</mybatis-spring.version>
 		<mysql-connector-java.version>5.1.34</mysql-connector-java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<jettyVersion>9.4.8.v20171121</jettyVersion>
 	</properties>
 	<dependencies>
         <dependency>
@@ -329,11 +331,40 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>1.8</source>
+					<target>1.8</target>
 					<encoding>UTF8</encoding>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<port>9090</port>
+					<path>/</path>
+					<uriEncoding>utf-8</uriEncoding>
+					<contextReloadable>true</contextReloadable>
+					<contextFile>src/main/webapp/META-INF/context.xml</contextFile>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>${jettyVersion}</version>
+				<configuration>
+					<webApp>
+						<contextPath>/</contextPath>
+						<defaultsDescriptor>${project.basedir}/../jetty/webdefault.xml</defaultsDescriptor>
+					</webApp>
+					<httpConnector>
+						<port>9090</port>
+					</httpConnector>
+					<reload>automatic</reload>
+				</configuration>
+			</plugin>
+
 		</plugins>
 		<resources>
 			<resource>

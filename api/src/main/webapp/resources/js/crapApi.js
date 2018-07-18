@@ -253,8 +253,10 @@ function createKindEditor(id,modelField){
 // 保存markdown
 function saveMarkdown(markdown,content){
 	var rootScope = getRootScope();
-	rootScope.$apply(function () {    
-	    rootScope.model[markdown] = getMarkdownText( $(window.frames["markdownFrame"].document).find('.ace_text-layer').html() );
+	rootScope.$apply(function () {
+		var markdownText=window.frames["markdownFrame"].editor.session.getValue();//$(window.frames["markdownFrame"].document).find('.ace_text-layer').html();
+	    rootScope.model[markdown] = markdownText;//getMarkdownText(markdownText);
+	    //console.log(rootScope.model);
 	    rootScope.model[content] = $(window.frames["markdownFrame"].document).find('#preview').html();
 	});
 	closeMyDialog('markdownDialog');

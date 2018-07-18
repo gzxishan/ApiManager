@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ page isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8"/>
@@ -170,5 +170,21 @@
         <article class="markdown-body" id="cache" style="display: none"></article>
       </div>
     </div>
+
+    <style>
+      .markdown-body{
+        padding-bottom:30px!important;
+      }
+    </style>
+     <script>
+            $(function(){
+                $("#editor").on("keydown",function(e){
+                       if(e.key=="Process"){
+                            return false;//对中文输入法的支持
+                       }
+                });
+
+            });
+    </script>
   </body>
 </html>
