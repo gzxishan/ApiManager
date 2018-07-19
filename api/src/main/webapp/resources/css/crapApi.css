@@ -286,6 +286,10 @@ blockquote{
 	padding-left:30px;
 	color: #555;
 }
+
+.panel-body a:hover{
+	color:white!important;
+}
  .searchInput {
  	display:inline-block!important;
  	height:23px!important;

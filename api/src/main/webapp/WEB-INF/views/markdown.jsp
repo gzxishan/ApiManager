@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../resources/markdown/dist/markdown-plus.min.css"/>
     <script src="../../resources/markdown/dist/markdown-plus.min.js" charset="utf-8"></script>
   </head>
-  <body>
+  <body style="visibility:hidden;">
     <div id="mdp-container" style="height: 99%;">
       <div class="ui-layout-north">
         <div id="toolbar" class="noselect">
@@ -183,7 +183,7 @@
                             return false;//对中文输入法的支持
                        }
                 });
-
+                $(document.body).css("visibility","visible");
             });
     </script>
   </body>
