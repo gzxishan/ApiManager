@@ -11,7 +11,7 @@
     <script src="../../resources/markdown/dist/markdown-plus.min.js" charset="utf-8"></script>
   </head>
   <body style="visibility:hidden;">
-    <div id="mdp-container" style="height: 99%;">
+    <div id="mdp-container" style="height: 100%;">
       <div class="ui-layout-north">
         <div id="toolbar" class="noselect">
           <i title="Bold" class="fa fa-bold styling-icon" data-modifier="**"></i>
