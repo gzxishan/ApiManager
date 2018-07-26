@@ -323,7 +323,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>api</finalName>
+		<finalName>ROOT</finalName>
 		<!-- 设置项目jdk版本，编码 -->
 		<plugins>
 			<plugin>
