@@ -19,6 +19,8 @@ import cn.crap.service.custom.CustomProjectService;
 import cn.crap.service.mybatis.*;
 import cn.crap.service.tool.LuceneSearchService;
 import cn.crap.utils.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -38,6 +40,9 @@ import java.util.Map;
 
 @Controller("fontMainController")
 public class MainController extends BaseController{
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(BaseController.class);
+
 	@Autowired
 	private ISearchService luceneService;
 	@Autowired
@@ -95,7 +100,7 @@ public class MainController extends BaseController{
 
 	@RequestMapping(value = "dashboard.htm")
 	public String dashboard(ModelMap modelMap) {
-
+		LOGGER.debug("start...");
 		LoginInfoDto loginInfoDto = LoginUserHelper.tryGetUser();
 		modelMap.addAttribute("login", loginInfoDto != null);
         modelMap.addAttribute("title", settingCache.get(S_TITLE).getValue());
@@ -155,7 +160,7 @@ public class MainController extends BaseController{
             objectCache.add(C_CACHE_LEFT_MENU, menuList);
         }
         modelMap.addAttribute("menuList", menuList);
-
+		LOGGER.debug("finished");
         return "WEB-INF/views/dashboard.jsp";
 	}
 	/**
