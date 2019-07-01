@@ -144,7 +144,7 @@ public class MainController extends BaseController{
         modelMap.addAttribute("projectList", projectList);
 
 
-        page = new Page(5, 1);
+        page = new Page(10, 1);
         List<ArticleDto> articleList = (List<ArticleDto>) objectCache.get(ARTICLE_LIST);
         if (CollectionUtils.isEmpty(articleList)){
             articleList = ArticleAdapter.getDto(customArticleService.queryArticle(null, null, ArticleType.ARTICLE.name(),
