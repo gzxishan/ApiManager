@@ -228,7 +228,7 @@
           </ul>
         </div>
         <div class="docs-content">
-          <div class="improve-docs-link"><a href="https://github.com/framework7io/framework7-website/edit/master/src/pug/undefined" target="_blank">Improve this Doc</a></div>
+          <div class="improve-docs-link"><a href="https://github.com/gzxishan/framework7-websitev3/edit/master/src/pug/undefined" target="_blank">Improve this Doc</a></div>
           <h1>Video Intelligence (vi)</h1>
           <ul class="docs-index"></ul>
           <p><a href="http://vi.ai" target="_blank">Video Intelligence</a> component that built into Framework7 allows you to easily add video advertising to your Framework7 app, straight out-of-the-box.</p>
@@ -477,7 +477,7 @@
                 <td>
                   Object with events handlers. For example:<pre><code class="js"><span class="token keyword">var</span> viAd <span class="token operator">=</span> app<span class="token punctuation">.</span>vi<span class="token punctuation">.</span><span class="token function">createAd</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   on<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    stopped<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">stopped</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token built-in">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Ad video stopped'</span><span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
@@ -698,7 +698,7 @@
   app<span class="token punctuation">.</span>vi<span class="token punctuation">.</span><span class="token function">createAd</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     fallbackOverlay<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
     on<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      autoplayFailed<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function-variable function">autoplayFailed</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">const</span> ad <span class="token operator">=</span> <span class="token context">this</span><span class="token punctuation">;</span>
         app<span class="token punctuation">.</span>dialog<span class="token punctuation">.</span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'Check out this awesome ad'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
           ad<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -713,16 +713,16 @@
   app<span class="token punctuation">.</span>vi<span class="token punctuation">.</span><span class="token function">createAd</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     autoplay<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
     on<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      ready<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function-variable function">ready</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">const</span> ad <span class="token operator">=</span> <span class="token context">this</span><span class="token punctuation">;</span>
         app<span class="token punctuation">.</span>dialog<span class="token punctuation">.</span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'Check out this awesome ad to get the reward'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
           ad<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span><span class="token punctuation">)</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      complete<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function-variable function">complete</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         app<span class="token punctuation">.</span>dialog<span class="token punctuation">.</span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'Congrats! You got the reward!'</span><span class="token punctuation">)</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      userexit<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function-variable function">userexit</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         app<span class="token punctuation">.</span>dialog<span class="token punctuation">.</span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'Sorry, no reward for you!'</span><span class="token punctuation">)</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span>

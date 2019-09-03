@@ -216,7 +216,7 @@
           </ul>
         </div>
         <div class="docs-content">
-          <div class="improve-docs-link"><a href="https://github.com/framework7io/framework7-website/edit/master/src/pug/undefined" target="_blank">Improve this Doc</a></div>
+          <div class="improve-docs-link"><a href="https://github.com/gzxishan/framework7-websitev3/edit/master/src/pug/undefined" target="_blank">Improve this Doc</a></div>
           <h1>Events</h1>
           <ul class="docs-index"></ul>
           <p>Most of Framework7 components that is built with classes/constructors (including Framework7 class itself) have kind of event emitter API.</p>
@@ -226,10 +226,10 @@
   <span class="token operator">...</span>
   on<span class="token punctuation">:</span> <span class="token punctuation">{</span>
     <span class="token comment">// each object key means same name event handler</span>
-    pageInit<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>page<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">pageInit</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">page</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token comment">// do something on page init</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    popupOpen<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>popup<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">popupOpen</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">popup</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token comment">// do something on popup open</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -238,7 +238,7 @@
 <span class="token keyword">var</span> popup <span class="token operator">=</span> app<span class="token punctuation">.</span>popup<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   <span class="token operator">...</span>
   on<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    open<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>popup<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">open</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">popup</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token comment">// do something on popup open</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
@@ -269,24 +269,24 @@
 
 <span class="token keyword">var</span> popup <span class="token operator">=</span> app<span class="token punctuation">.</span>popup<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token comment">/*...*/</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-app<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'pageInit'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>page<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+app<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'pageInit'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">page</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token comment">// do something on page init</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-app<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'popupClose'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>popup<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+app<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'popupClose'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">popup</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token comment">// do something on popup open</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-popup<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'open'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>popup<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+popup<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'open'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">popup</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token comment">// do something on popup open</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">// Once handler, will work only once</span>
-popup<span class="token punctuation">.</span><span class="token function">once</span><span class="token punctuation">(</span><span class="token string">'close'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>popup<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+popup<span class="token punctuation">.</span><span class="token function">once</span><span class="token punctuation">(</span><span class="token string">'close'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">popup</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token comment">// do something on popup close</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></code>
           <h4>Add Multiple Handlers</h4>
-          <p>We can pass multiple events in first parameters separated with space:</p><pre><code class="js">app<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'popupOpen popupClose'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>popup<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <p>We can pass multiple events in first parameters separated with space:</p><pre><code class="js">app<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'popupOpen popupClose'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">popup</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token comment">// do something on popupOpen and popupClose</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></code>
           <h4>Remove Event Handlers</h4>
@@ -303,7 +303,7 @@ app<span class="token punctuation">.</span><span class="token function">off</spa
           <p>If we don't pass second handler argument to <code>.off</code> method then we will remove all handlers assigned for this event:</p><pre><code class="js"><span class="token comment">// Remove all tabShow handlers</span>
 app<span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token string">'tabShow'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></code>
           <h4>Emit Events</h4>
-          <p>And of course we can emit events and any kind of custom events we may need:</p><pre><code class="js">app<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'myCustomEvent'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <p>And of course we can emit events and any kind of custom events we may need:</p><pre><code class="js">app<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'myCustomEvent'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token built-in">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// -> 'foo'</span>
   <span class="token built-in">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// -> 'bar'</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>

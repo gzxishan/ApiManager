@@ -140,7 +140,7 @@
           </ul>
         </div>
         <div class="docs-content">
-          <div class="improve-docs-link"><a href="https://github.com/framework7io/framework7-website/edit/master/src/pug/undefined" target="_blank">Improve this Doc</a></div>
+          <div class="improve-docs-link"><a href="https://github.com/gzxishan/framework7-websitev3/edit/master/src/pug/undefined" target="_blank">Improve this Doc</a></div>
           <h1>Virtual List Vue Component</h1>
           <ul class="docs-index"></ul>
           <p>Virtual List is not a separate Vue component, but just a particular case of using <a href="list-view.html">&lt;f7-list&gt;</a>, <a href="list-item.html">&lt;f7-list-item&gt;</a> Vue components and special Framework7's <a href="../docs/virtual-list.html">Virtual List</a> component.</p>
@@ -244,14 +244,14 @@
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>f7-list</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>f7-page</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword-block">export</span> <span class="token keyword-block">default</span> <span class="token punctuation">{</span>
     <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token keyword">const</span> items <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
       <span class="token keyword-block">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">10000</span><span class="token punctuation">;</span> i <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         items<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-          title<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`Item </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>i<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">,</span>
-          subtitle<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`Subtitle </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>i<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">,</span>
+          title<span class="token punctuation">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Item </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>i<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+          subtitle<span class="token punctuation">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Subtitle </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>i<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
         <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token punctuation">}</span>
       <span class="token keyword-block">return</span> <span class="token punctuation">{</span>
@@ -262,19 +262,19 @@
       <span class="token punctuation">}</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
     methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      <span class="token function">searchAll</span><span class="token punctuation">(</span>query<span class="token punctuation">,</span> items<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">searchAll</span><span class="token punctuation">(</span><span class="token parameter">query<span class="token punctuation">,</span> items</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">const</span> found <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
         <span class="token keyword-block">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> items<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
           <span class="token keyword-block">if</span> <span class="token punctuation">(</span>items<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>title<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>query<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">>=</span> <span class="token number">0</span> <span class="token operator">||</span> query<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">''</span><span class="token punctuation">)</span> found<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
         <span class="token keyword-block">return</span> found<span class="token punctuation">;</span> <span class="token comment">// return array with mathced indexes</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token function">renderExternal</span><span class="token punctuation">(</span>vl<span class="token punctuation">,</span> vlData<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">renderExternal</span><span class="token punctuation">(</span><span class="token parameter">vl<span class="token punctuation">,</span> vlData</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token context">this</span><span class="token punctuation">.</span>vlData <span class="token operator">=</span> vlData<span class="token punctuation">;</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></pre></code>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></pre></code>
           </div>
         </div>
       </div>

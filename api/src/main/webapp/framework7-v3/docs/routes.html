@@ -216,7 +216,7 @@
           </ul>
         </div>
         <div class="docs-content">
-          <div class="improve-docs-link"><a href="https://github.com/framework7io/framework7-website/edit/master/src/pug/undefined" target="_blank">Improve this Doc</a></div>
+          <div class="improve-docs-link"><a href="https://github.com/gzxishan/framework7-websitev3/edit/master/src/pug/undefined" target="_blank">Improve this Doc</a></div>
           <h1>Routes</h1>
           <ul class="docs-index"></ul>
           <h2>Define Routes</h2>
@@ -245,10 +245,10 @@
         <span class="token punctuation">}</span><span class="token punctuation">,</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
       on<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        pageAfterIn<span class="token punctuation">:</span> <span class="token keyword">function</span> test <span class="token punctuation">(</span>e<span class="token punctuation">,</span> page<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function-variable function">pageAfterIn</span><span class="token punctuation">:</span> <span class="token keyword">function</span> test <span class="token punctuation">(</span><span class="token parameter">e<span class="token punctuation">,</span> page</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
           <span class="token comment">// do something after page gets into the view</span>
         <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        pageInit<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">,</span> page<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function-variable function">pageInit</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e<span class="token punctuation">,</span> page</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
           <span class="token comment">// do something when page initialized</span>
         <span class="token punctuation">}</span><span class="token punctuation">,</span>
       <span class="token punctuation">}</span>
@@ -480,7 +480,7 @@
   <span class="token comment">// Dynamic page from content</span>
   <span class="token punctuation">{</span>
     path<span class="token punctuation">:</span> <span class="token string">'/news/'</span><span class="token punctuation">,</span>
-    content<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`
+    content<span class="token punctuation">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
       &lt;div class="page">
         &lt;div class="page-content">
           &lt;div class="block">
@@ -488,7 +488,7 @@
           &lt;/div>
         &lt;/div>
       &lt;/div>
-    `</span></span><span class="token punctuation">,</span>
+    </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token comment">// By page name (data-name="services") presented in DOM</span>
   <span class="token punctuation">{</span>
@@ -503,7 +503,7 @@
   <span class="token comment">// By template</span>
   <span class="token punctuation">{</span>
     path<span class="token punctuation">:</span> <span class="token string">'/template/:name/'</span><span class="token punctuation">,</span>
-    template<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`
+    template<span class="token punctuation">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
       &lt;div class="page">
         &lt;div class="page-content">
           &lt;div class="block">
@@ -511,7 +511,7 @@
           &lt;/div>
         &lt;/div>
       &lt;/div>
-    `</span></span><span class="token punctuation">,</span>
+    </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token comment">// By template URL</span>
   <span class="token punctuation">{</span>
@@ -533,11 +533,11 @@
   <span class="token comment">// Async</span>
   <span class="token punctuation">{</span>
     path<span class="token punctuation">:</span> <span class="token string">'/something/'</span><span class="token punctuation">,</span>
-    <span class="token keyword-block">async</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>routeTo<span class="token punctuation">,</span> routeFrom<span class="token punctuation">,</span> resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">async</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">routeTo<span class="token punctuation">,</span> routeFrom<span class="token punctuation">,</span> resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token comment">// Requested route</span>
       <span class="token built-in">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>routeTo<span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token comment">// Get external data and return template7 template</span>
-      app<span class="token punctuation">.</span>request<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token string">'http://some-endpoint/'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      app<span class="token punctuation">.</span>request<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token string">'http://some-endpoint/'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token function">resolve</span><span class="token punctuation">(</span>
           <span class="token comment">// How and what to load: template</span>
           <span class="token punctuation">{</span>
@@ -661,16 +661,16 @@
       path<span class="token punctuation">:</span> <span class="token string">'/users/'</span><span class="token punctuation">,</span>
       url<span class="token punctuation">:</span> <span class="token string">'./pages/users.html'</span><span class="token punctuation">,</span>
       on<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        pageBeforeIn<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>event<span class="token punctuation">,</span> page<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function-variable function">pageBeforeIn</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">event<span class="token punctuation">,</span> page</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
           <span class="token comment">// do something before page gets into the view</span>
         <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        pageAfterIn<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>event<span class="token punctuation">,</span> page<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function-variable function">pageAfterIn</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">event<span class="token punctuation">,</span> page</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
           <span class="token comment">// do something after page gets into the view</span>
         <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        pageInit<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>event<span class="token punctuation">,</span> page<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function-variable function">pageInit</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">event<span class="token punctuation">,</span> page</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
           <span class="token comment">// do something when page initialized</span>
         <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        pageBeforeRemove<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>event<span class="token punctuation">,</span> page<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function-variable function">pageBeforeRemove</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">event<span class="token punctuation">,</span> page</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
           <span class="token comment">// do something before page gets removed from DOM</span>
         <span class="token punctuation">}</span><span class="token punctuation">,</span>
       <span class="token punctuation">}</span>
@@ -756,12 +756,12 @@
         path<span class="token punctuation">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
         id<span class="token punctuation">:</span> <span class="token string">'about'</span><span class="token punctuation">,</span>
         <span class="token comment">// Fill this tab content from content string</span>
-        content<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`
+        content<span class="token punctuation">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
           &lt;div class="block">
             &lt;h3>About Me&lt;/h3>
             &lt;p>...&lt;/p>
           &lt;/div>
-        `</span></span>
+        </span><span class="token template-punctuation string">`</span></span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
       <span class="token comment">// Second tab</span>
       <span class="token punctuation">{</span>
@@ -814,7 +814,7 @@
   <span class="token punctuation">{</span>
     path<span class="token punctuation">:</span> <span class="token string">'/popup-content/'</span><span class="token punctuation">,</span>
     popup<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      content<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`
+      content<span class="token punctuation">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
         &lt;div class="popup">
           &lt;div class="view">
             &lt;div class="page">
@@ -822,7 +822,7 @@
             &lt;/div>
           &lt;/div>
         &lt;/div>
-      `</span></span>
+      </span><span class="token template-punctuation string">`</span></span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token comment">// Load Login Screen from file via Ajax</span>
@@ -901,7 +901,7 @@
   <span class="token punctuation">{</span>
     path<span class="token punctuation">:</span> <span class="token string">'/left-panel/'</span><span class="token punctuation">,</span>
     panel<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      content<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`
+      content<span class="token punctuation">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
         &lt;div class="panel panel-left panel-cover">
           &lt;div class="view">
             &lt;div class="page">
@@ -909,7 +909,7 @@
             &lt;/div>
           &lt;/div>
         &lt;/div>
-      `</span></span>
+      </span><span class="token template-punctuation string">`</span></span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token comment">// Load Panel from file via Ajax</span>
@@ -963,7 +963,7 @@
   <span class="token punctuation">{</span>
     path<span class="token punctuation">:</span> <span class="token string">'profile'</span><span class="token punctuation">,</span>
     url<span class="token punctuation">:</span> <span class="token string">'profile.html'</span><span class="token punctuation">,</span>
-    beforeEnter<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>routeTo<span class="token punctuation">,</span> routeFrom<span class="token punctuation">,</span> resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">beforeEnter</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">routeTo<span class="token punctuation">,</span> routeFrom<span class="token punctuation">,</span> resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token keyword-block">if</span> <span class="token punctuation">(</span><span class="token comment">/* some condition to check user is logged in */</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token punctuation">}</span> <span class="token keyword-block">else</span> <span class="token punctuation">{</span>
@@ -976,7 +976,7 @@
   <span class="token punctuation">{</span>
     path<span class="token punctuation">:</span> <span class="token string">'profile-edit'</span><span class="token punctuation">,</span>
     url<span class="token punctuation">:</span> <span class="token string">'profile.html'</span><span class="token punctuation">,</span>
-    beforeLeave<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>routeTo<span class="token punctuation">,</span> routeFrom<span class="token punctuation">,</span> resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">beforeLeave</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">routeTo<span class="token punctuation">,</span> routeFrom<span class="token punctuation">,</span> resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token keyword-block">if</span> <span class="token punctuation">(</span><span class="token comment">/* user didn't save edited form */</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         app<span class="token punctuation">.</span>dialog<span class="token punctuation">.</span><span class="token function">confirm</span><span class="token punctuation">(</span>
           <span class="token string">'Are you sure you want to leave this page without saving data?'</span><span class="token punctuation">,</span>
@@ -995,14 +995,14 @@
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">]</span></pre></code>
-          <p>And of course there are multiple hooks are supported when passed as array of functions:</p><pre><code class="js"><span class="token keyword">function</span> <span class="token function">checkAuth</span><span class="token punctuation">(</span>to<span class="token punctuation">,</span> <span class="token keyword-block">from</span><span class="token punctuation">,</span> resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <p>And of course there are multiple hooks are supported when passed as array of functions:</p><pre><code class="js"><span class="token keyword">function</span> <span class="token function">checkAuth</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> <span class="token keyword-block">from</span><span class="token punctuation">,</span> resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword-block">if</span> <span class="token punctuation">(</span><span class="token comment">/* some condition to check user is logged in */</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span> <span class="token keyword-block">else</span> <span class="token punctuation">{</span>
     <span class="token function">reject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-<span class="token keyword">function</span> <span class="token function">checkPermission</span><span class="token punctuation">(</span>to<span class="token punctuation">,</span> <span class="token keyword-block">from</span><span class="token punctuation">,</span> resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">function</span> <span class="token function">checkPermission</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> <span class="token keyword-block">from</span><span class="token punctuation">,</span> resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword-block">if</span> <span class="token punctuation">(</span><span class="token comment">/* some condition to check user edit permission */</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span> <span class="token keyword-block">else</span> <span class="token punctuation">{</span>
@@ -1062,7 +1062,7 @@ routes <span class="token operator">=</span> <span class="token punctuation">[</
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">{</span>
     path<span class="token punctuation">:</span> <span class="token string">'/baz/'</span><span class="token punctuation">,</span>
-    redirect<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>route<span class="token punctuation">,</span> resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">redirect</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">route<span class="token punctuation">,</span> resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token comment">// if we have "user" query parameter</span>
       <span class="token keyword-block">if</span> <span class="token punctuation">(</span>route<span class="token punctuation">.</span>query<span class="token punctuation">.</span>user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token comment">// redirect to such url</span>

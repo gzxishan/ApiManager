@@ -228,7 +228,7 @@
           </ul>
         </div>
         <div class="docs-content">
-          <div class="improve-docs-link"><a href="https://github.com/framework7io/framework7-website/edit/master/src/pug/undefined" target="_blank">Improve this Doc</a></div>
+          <div class="improve-docs-link"><a href="https://github.com/gzxishan/framework7-websitev3/edit/master/src/pug/undefined" target="_blank">Improve this Doc</a></div>
           <h1>Calendar / Datepicker</h1>
           <ul class="docs-index"></ul>
           <p>Calendar is a touch optimized component that provides an easy way to handle dates.</p>
@@ -635,7 +635,7 @@
                   Object with events handlers. For example:<pre><code class="js"><span class="token keyword">var</span> calendar <span class="token operator">=</span> app<span class="token punctuation">.</span>calendar<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   <span class="token operator">...</span>
   on<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    opened<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">opened</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token built-in">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Calendar opened'</span><span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
@@ -663,7 +663,7 @@
           <p>It can be custom function where you need to return <b>true</b> or <b>false</b></p><pre><code class="js"><span class="token keyword">var</span> calendar <span class="token operator">=</span> app<span class="token punctuation">.</span>calendar<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     <span class="token operator">...</span>
     <span class="token comment">//Disabled all dates in November 2015</span>
-    disabled<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>date<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">disabled</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">date</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword-block">if</span> <span class="token punctuation">(</span>date<span class="token punctuation">.</span><span class="token function">getFullYear</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token number">2015</span> <span class="token operator">&amp;&amp;</span> date<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token keyword-block">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
@@ -733,7 +733,7 @@
             <span class="token comment">// string CSS class name for this range in "cssClass" property</span>
             cssClass<span class="token punctuation">:</span> <span class="token string">'day-october'</span><span class="token punctuation">,</span> <span class="token comment">//string CSS class</span>
             <span class="token comment">// Date Range in "range" property</span>
-            range<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>date<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function-variable function">range</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">date</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
                 <span class="token keyword-block">return</span> date<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token number">9</span>
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -1214,7 +1214,7 @@
   containerEl<span class="token punctuation">:</span> <span class="token string">'#demo-calendar-inline-container'</span><span class="token punctuation">,</span>
   value<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
   weekHeader<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-  renderToolbar<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">renderToolbar</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword-block">return</span> <span class="token string">'&lt;div class="toolbar calendar-custom-toolbar no-shadow">'</span> <span class="token operator">+</span>
       <span class="token string">'&lt;div class="toolbar-inner">'</span> <span class="token operator">+</span>
         <span class="token string">'&lt;div class="left">'</span> <span class="token operator">+</span>
@@ -1228,7 +1228,7 @@
     <span class="token string">'&lt;/div>'</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   on<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    init<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>c<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">init</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">c</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token function">$$</span><span class="token punctuation">(</span><span class="token string">'.calendar-custom-toolbar .center'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span>monthNames<span class="token punctuation">[</span>c<span class="token punctuation">.</span>currentMonth<span class="token punctuation">]</span> <span class="token operator">+</span><span class="token string">', '</span> <span class="token operator">+</span> c<span class="token punctuation">.</span>currentYear<span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token function">$$</span><span class="token punctuation">(</span><span class="token string">'.calendar-custom-toolbar .left .link'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         calendarInline<span class="token punctuation">.</span><span class="token function">prevMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1237,7 +1237,7 @@
         calendarInline<span class="token punctuation">.</span><span class="token function">nextMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    monthYearChangeStart<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>c<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">monthYearChangeStart</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">c</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token function">$$</span><span class="token punctuation">(</span><span class="token string">'.calendar-custom-toolbar .center'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span>monthNames<span class="token punctuation">[</span>c<span class="token punctuation">.</span>currentMonth<span class="token punctuation">]</span> <span class="token operator">+</span><span class="token string">', '</span> <span class="token operator">+</span> c<span class="token punctuation">.</span>currentYear<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>

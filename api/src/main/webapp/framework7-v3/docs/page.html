@@ -228,7 +228,7 @@
           </ul>
         </div>
         <div class="docs-content">
-          <div class="improve-docs-link"><a href="https://github.com/framework7io/framework7-website/edit/master/src/pug/undefined" target="_blank">Improve this Doc</a></div>
+          <div class="improve-docs-link"><a href="https://github.com/gzxishan/framework7-websitev3/edit/master/src/pug/undefined" target="_blank">Improve this Doc</a></div>
           <h1>Page</h1>
           <ul class="docs-index"></ul>
           <p>Page is one of the main components (containers) used to display app content.</p>
@@ -300,12 +300,12 @@
             </tbody>
           </table>
           <p>Lets see how we can use these events. There are two ways to add page event handlers:</p><pre><code class="js"><span class="token comment">// Option 1. Using one 'page:init' handler for all pages</span>
-<span class="token function">$$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'page:init'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token function">$$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'page:init'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token comment">// Do something here when page loaded and initialized</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
 <span class="token comment">// Option 2. Using live 'page:init' event handlers for each page</span>
-<span class="token function">$$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'page:init'</span><span class="token punctuation">,</span> <span class="token string">'.page[data-name="about"]'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token function">$$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'page:init'</span><span class="token punctuation">,</span> <span class="token string">'.page[data-name="about"]'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token comment">// Do something here when page with data-name="about" attribute loaded and initialized</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span></pre></code>
           <h2>Page Loading Sequence Classes</h2>
@@ -340,12 +340,12 @@
           </ol>
           <h2>Page Data</h2>
           <p>As you may see it is pretty easy, but how do you determine which page is loaded when we use only one handler? For this case we have Page Data in the event details:</p><pre><code class="js"><span class="token comment">// In page events:</span>
-<span class="token function">$$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'page:init'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token function">$$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'page:init'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token comment">// Page Data contains all required information about loaded and initialized page</span>
   <span class="token keyword">var</span> page <span class="token operator">=</span> e<span class="token punctuation">.</span>detail<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span></pre></code>
           <p>Or in case the event handler was assigned using Dom7 like in example above then it will be passed in second argument:</p><pre><code class="js"><span class="token comment">// In page events:</span>
-<span class="token function">$$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'page:init'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">,</span> page<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token function">$$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'page:init'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e<span class="token punctuation">,</span> page</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token built-in">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>page<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span></pre></code>
           <p>Now, in the example above we have page data in <code><b>page</b></code> variable. It is an object with the following properties:</p>

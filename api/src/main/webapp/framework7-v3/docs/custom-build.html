@@ -216,7 +216,7 @@
           </ul>
         </div>
         <div class="docs-content">
-          <div class="improve-docs-link"><a href="https://github.com/framework7io/framework7-website/edit/master/src/pug/undefined" target="_blank">Improve this Doc</a></div>
+          <div class="improve-docs-link"><a href="https://github.com/gzxishan/framework7-websitev3/edit/master/src/pug/undefined" target="_blank">Improve this Doc</a></div>
           <h1>Framework7 Custom Build</h1>
           <ul class="docs-index"></ul>
           <h2>Custom Build</h2>
@@ -570,19 +570,19 @@ Framework7<span class="token punctuation">.</span><span class="token function">u
           <h2>Less.js</h2>
           <p>Framework7 styles are build with <a href="http://lesscss.org/" target="_blank">Less.js</a>. If you use Less and NPM in your app/project then you can easily create custom framework7 stylesheet with only components you need.</p>
           <p>Create your own <code>framework7.less</code> file:</p><pre><code class="less"><span class="token comment">// core</span>
-<span class="token variable">@import</span> <span class="token url">url('path/to/node_modules/framework7/framework7.less')</span><span class="token punctuation">;</span>
+<span class="token variable">@import</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span>'path/to/node_modules/framework7/framework7.less'<span class="token punctuation">)</span></span><span class="token punctuation">;</span>
 
 <span class="token comment">// import only components you need</span>
-<span class="token variable">@import</span> <span class="token url">url('path/to/node_modules/framework7/components/searchbar/searchbar.less')</span><span class="token punctuation">;</span>
-<span class="token variable">@import</span> <span class="token url">url('path/to/node_modules/framework7/components/calendar/calendar.less')</span><span class="token punctuation">;</span>
-<span class="token variable">@import</span> <span class="token url">url('path/to/node_modules/framework7/components/popup/popup.less')</span><span class="token punctuation">;</span></pre></code>
+<span class="token variable">@import</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span>'path/to/node_modules/framework7/components/searchbar/searchbar.less'<span class="token punctuation">)</span></span><span class="token punctuation">;</span>
+<span class="token variable">@import</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span>'path/to/node_modules/framework7/components/calendar/calendar.less'<span class="token punctuation">)</span></span><span class="token punctuation">;</span>
+<span class="token variable">@import</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span>'path/to/node_modules/framework7/components/popup/popup.less'<span class="token punctuation">)</span></span><span class="token punctuation">;</span></pre></code>
           <p>We can go even further and specify Framework7's main color theme and required colors in custom <code>framework7.less</code> file:</p><pre><code class="less"><span class="token comment">// core</span>
-<span class="token variable">@import</span> <span class="token url">url('path/to/node_modules/framework7/framework7.less')</span><span class="token punctuation">;</span>
+<span class="token variable">@import</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span>'path/to/node_modules/framework7/framework7.less'<span class="token punctuation">)</span></span><span class="token punctuation">;</span>
 
 <span class="token comment">// import only components you need</span>
-<span class="token variable">@import</span> <span class="token url">url('path/to/node_modules/framework7/components/searchbar/searchbar.less')</span><span class="token punctuation">;</span>
-<span class="token variable">@import</span> <span class="token url">url('path/to/node_modules/framework7/components/calendar/calendar.less')</span><span class="token punctuation">;</span>
-<span class="token variable">@import</span> <span class="token url">url('path/to/node_modules/framework7/components/popup/popup.less')</span><span class="token punctuation">;</span>
+<span class="token variable">@import</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span>'path/to/node_modules/framework7/components/searchbar/searchbar.less'<span class="token punctuation">)</span></span><span class="token punctuation">;</span>
+<span class="token variable">@import</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span>'path/to/node_modules/framework7/components/calendar/calendar.less'<span class="token punctuation">)</span></span><span class="token punctuation">;</span>
+<span class="token variable">@import</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span>'path/to/node_modules/framework7/components/popup/popup.less'<span class="token punctuation">)</span></span><span class="token punctuation">;</span>
 
 <span class="token comment">// include/exclude themes</span>
 <span class="token variable">@includeIosTheme<span class="token punctuation">:</span></span> true<span class="token punctuation">;</span>

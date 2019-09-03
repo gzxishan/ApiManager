@@ -228,7 +228,7 @@
           </ul>
         </div>
         <div class="docs-content">
-          <div class="improve-docs-link"><a href="https://github.com/framework7io/framework7-website/edit/master/src/pug/undefined" target="_blank">Improve this Doc</a></div>
+          <div class="improve-docs-link"><a href="https://github.com/gzxishan/framework7-websitev3/edit/master/src/pug/undefined" target="_blank">Improve this Doc</a></div>
           <h1>Popup</h1>
           <ul class="docs-index"></ul>
           <p>Popup is a popup window with any HTML content that pops up over App's main content. Popup as all other overlays is part of so called "Temporary Views".</p>
@@ -335,7 +335,7 @@
                   Object with events handlers. For example:<pre><code class="js"><span class="token keyword">var</span> popup <span class="token operator">=</span> app<span class="token punctuation">.</span>popup<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   content<span class="token punctuation">:</span> <span class="token string">'&lt;div class="popup">...&lt;/div>'</span><span class="token punctuation">,</span>
   on<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    opened<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">opened</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token built-in">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Popup opened'</span><span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
@@ -609,10 +609,10 @@
 <span class="token keyword">var</span> $$ <span class="token operator">=</span> Dom7<span class="token punctuation">;</span>
 
 <span class="token comment">// DOM events for About popup</span>
-<span class="token function">$$</span><span class="token punctuation">(</span><span class="token string">'.popup-about'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'popup:open'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">,</span> popup<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token function">$$</span><span class="token punctuation">(</span><span class="token string">'.popup-about'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'popup:open'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e<span class="token punctuation">,</span> popup</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token built-in">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'About popup open'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">$$</span><span class="token punctuation">(</span><span class="token string">'.popup-about'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'popup:opened'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">,</span> popup<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token function">$$</span><span class="token punctuation">(</span><span class="token string">'.popup-about'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'popup:opened'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e<span class="token punctuation">,</span> popup</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token built-in">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'About popup opened'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -626,19 +626,19 @@
             <span class="token string">'&lt;/div>'</span><span class="token punctuation">,</span>
   <span class="token comment">// Events</span>
   on<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    open<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>popup<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">open</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">popup</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token built-in">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Popup open'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    opened<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>popup<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">opened</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">popup</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token built-in">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Popup opened'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">// Events also can be assigned on instance later</span>
-dynamicPopup<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'close'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>popup<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+dynamicPopup<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'close'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">popup</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token built-in">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Popup close'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-dynamicPopup<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'closed'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>popup<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+dynamicPopup<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'closed'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">popup</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token built-in">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Popup closed'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
