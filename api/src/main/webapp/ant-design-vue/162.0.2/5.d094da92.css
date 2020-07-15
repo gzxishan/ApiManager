@@ -1,0 +1,49 @@
+
+.code-box-demo .ant-slider[data-v-7efbb345] {
+  margin-bottom: 16px;
+}
+
+
+.icon-wrapper[data-v-15be4226] {
+  position: relative;
+  padding: 0px 30px;
+}
+.icon-wrapper .anticon[data-v-15be4226] {
+  position: absolute;
+  top: -2px;
+  width: 16px;
+  height: 16px;
+  line-height: 1;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.25);
+}
+.icon-wrapper .anticon[data-v-15be4226]:first-child {
+  left: 0;
+}
+.icon-wrapper .anticon[data-v-15be4226]:last-child {
+  right: 0;
+}
+
+
+.code-box-demo .ant-slider[data-v-33bb889e] {
+  margin-bottom: 16px;
+}
+
+
+.code-box-demo .ant-slider[data-v-797951a2] {
+  margin-bottom: 16px;
+}
+
+
+.code-box-demo .ant-slider[data-v-d3739e62] {
+  margin-bottom: 16px;
+}
+
+
+#components-slider-demo-mark h4[data-v-604fab86] {
+  margin: 0 0 16px;
+}
+#components-slider-demo-mark .ant-slider-with-marks[data-v-604fab86] {
+  margin-bottom: 44px;
+}
+
